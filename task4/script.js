@@ -10,6 +10,15 @@ const marks = {
    'Артур': 0,
    'Платон': 0,
 };
+function validateForm()
+{
+   let Name = document.forms.firstform.elements.Name.value;
+   let Points = parseInt(document.forms.firstform.elements.Points.value);
+   
+   points.Name = Points;
+   marks.Name = 0;
+   return false;
+}
 
 for (let x in points) {
    if (points[x] < 60) marks[x] = "незачёт";

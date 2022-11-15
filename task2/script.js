@@ -20,9 +20,9 @@ function validateForm()
   }
   else
   {
-   A = parseInt(A);
-   B = parseInt(B);
-   C = parseInt(C);
+   A = parseFloat(A);
+   B = parseFloat(B);
+   C = parseFloat(C);
    if (A + B > C && A + C > B && B + C > A)
    {
       let p = (A + B + C) / 2;

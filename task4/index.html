@@ -11,6 +11,23 @@
 <body>
    <h4>Баллы</h4>
    <div id="points_out"></div>
+
+   <form name="firstform" onsubmit="return validateForm();">
+      <table>
+         <tr>
+            <td>Имя:</td>
+            <td><input name="Name"></td>
+            <td>Баллы:</td>
+            <td><input name="Points"></td>
+         </tr>
+         <tr>
+            <td colspan="2"><input type="submit" value="Добавить данные"></td>
+         </tr>
+      </table>
+   </form>
+   <h4>Баллы</h4>
+   <div id="points_out"></div>
+
    <h4>Оценки</h4>
    <div id="marks_out"></div>
 
