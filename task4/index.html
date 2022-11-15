@@ -6,30 +6,46 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Оценки</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   <h4>Баллы</h4>
-   <div id="points_out"></div>
+   <div class="main">
+      <div class="tables">
+         <div class="table">
+            <h4>Баллы</h4>
+            <div id="points_out"></div>
+         </div>
 
-   <form name="firstform" onsubmit="return validateForm();">
-      <table>
-         <tr>
-            <td>Имя:</td>
-            <td><input name="Name"></td>
-            <td>Баллы:</td>
-            <td><input name="Points"></td>
-         </tr>
-         <tr>
-            <td colspan="2"><input type="submit" value="Добавить данные"></td>
-         </tr>
-      </table>
-   </form>
-   <h4>Баллы</h4>
-   <div id="points_out"></div>
+         <div class="table">
+            <h4>Оценки</h4>
+            <div id="marks_out"></div>
+         </div>
+      </div>
 
-   <h4>Оценки</h4>
-   <div id="marks_out"></div>
+      <div class="add_delete">
+         <form class="add" name="firstform" onsubmit="return addInfoForm();">
+            <tr>
+               <td>Имя:</td>
+               <td><input type="text" name="Name"></td>
+               <td>Баллы:</td>
+               <td><input type="number" name="Points"></td>
+            </tr>
+            <tr>
+               <td colspan="2"><input type="submit" value="Добавить данные"></td>
+            </tr>
+         </form>
+         <form class="delete" name="secondform" onsubmit="return deleteInfoForm();">
+            <tr>
+               <td>Имя:</td>
+               <td><input name="Name"></td>
+            </tr>
+            <tr>
+               <td colspan="2"><input type="submit" value="Удалить данные"></td>
+            </tr>
+         </form>
+      </div>
+   </div>
 
    <script src="script.js"></script>
 </body>
