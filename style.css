@@ -1,0 +1,142 @@
+*{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+}
+
+/* oleo-script-swash-caps-regular - latin */
+@font-face {
+   font-family: 'Oleo Script Swash Caps';
+   font-style: normal;
+   font-weight: 400;
+   src: local(''),
+        url('fonts/oleo-script-swash-caps-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/oleo-script-swash-caps-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+ /* oleo-script-swash-caps-700 - latin */
+ @font-face {
+   font-family: 'Oleo Script Swash Caps';
+   font-style: normal;
+   font-weight: 700;
+   src: local(''),
+        url('fonts/oleo-script-swash-caps-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/oleo-script-swash-caps-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+ /* ubuntu-regular - cyrillic */
+@font-face {
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 400;
+   src: local(''),
+        url('../fonts/ubuntu-v20-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/ubuntu-v20-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+ /* ubuntu-500 - cyrillic */
+ @font-face {
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 500;
+   src: local(''),
+        url('../fonts/ubuntu-v20-cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/ubuntu-v20-cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+
+.navbar-brand{
+   font-family: 'Oleo Script Swash Caps';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 50px;
+}
+
+.nav-link{
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 20px;
+}
+
+.sell_blocks{
+   margin-top: 8em;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin-bottom: 10em;
+}
+
+.card{
+   padding: 0.6em;
+   text-decoration: none;
+   color: black;
+   box-shadow: 6px 6px 10px 1px rgb(197, 197, 197);
+}
+
+.card:hover{
+   transform: scale(1.01);
+   color: black;
+   border: 1px solid #be0000;
+}
+
+.car_name{
+   margin-top: 1em;
+}
+
+.footer{
+   width: 100%;
+   height: 100px;
+   background-color: black;
+}
+
+.footer_text{
+   text-align: center;
+   padding-top: 0.8em;
+}
+
+.footer_link{
+   text-decoration: none;
+   color: white;
+}
+.footer_link:hover{
+   opacity: 80%;
+   color: azure;
+}
+
+.footer_item{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.footer_social_link{
+   margin-top: 0.5em;
+   margin-left: 0.5em;
+}
+
+.footer_social_link:hover{
+   opacity: 80%;
+}
+
+h4{
+   margin: 0%;
+}
+
+.main{
+   display: flex;
+}
+
+.tables{
+   display: inline-block;
+}
+
+.table{
+   display: inline-block;
+}
+
+.add_delete{
+   display: inline-block;
+   margin-left: 10px;
+}
+
+.delete{
+   padding-top: 5px;
+}
