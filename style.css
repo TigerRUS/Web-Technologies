@@ -1,4 +1,4 @@
-*{
+* {
    margin: 0%;
    padding: 0%;
    box-sizing: border-box;
@@ -10,38 +10,49 @@
    font-style: normal;
    font-weight: 400;
    src: local(''),
-        url('fonts/oleo-script-swash-caps-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/oleo-script-swash-caps-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
- }
- /* oleo-script-swash-caps-700 - latin */
- @font-face {
+      url('fonts/oleo-script-swash-caps-v13-latin-regular.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('fonts/oleo-script-swash-caps-v13-latin-regular.woff') format('woff');
+   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* oleo-script-swash-caps-700 - latin */
+@font-face {
    font-family: 'Oleo Script Swash Caps';
    font-style: normal;
    font-weight: 700;
    src: local(''),
-        url('fonts/oleo-script-swash-caps-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/oleo-script-swash-caps-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
- }
- /* ubuntu-regular - cyrillic */
+      url('fonts/oleo-script-swash-caps-v13-latin-700.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('fonts/oleo-script-swash-caps-v13-latin-700.woff') format('woff');
+   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* ubuntu-regular - cyrillic */
 @font-face {
    font-family: 'Ubuntu';
    font-style: normal;
    font-weight: 400;
    src: local(''),
-        url('../fonts/ubuntu-v20-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/ubuntu-v20-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
- }
- /* ubuntu-500 - cyrillic */
- @font-face {
+      url('../fonts/ubuntu-v20-cyrillic-regular.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/ubuntu-v20-cyrillic-regular.woff') format('woff');
+   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* ubuntu-500 - cyrillic */
+@font-face {
    font-family: 'Ubuntu';
    font-style: normal;
    font-weight: 500;
    src: local(''),
-        url('../fonts/ubuntu-v20-cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/ubuntu-v20-cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
- }
+      url('../fonts/ubuntu-v20-cyrillic-500.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/ubuntu-v20-cyrillic-500.woff') format('woff');
+   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
-.navbar-brand{
+.navbar-brand {
    font-family: 'Oleo Script Swash Caps';
    font-style: normal;
    font-weight: 700;
@@ -49,14 +60,18 @@
    line-height: 50px;
 }
 
-.nav-link{
+.nav-link {
    font-family: 'Ubuntu';
    font-style: normal;
    font-weight: 700;
-   font-size: 20px;
+   font-size: 26px;
 }
 
-.sell_blocks{
+.nav-link:hover {
+   color: #be0000;
+}
+
+.sell_blocks {
    margin-top: 8em;
    display: flex;
    flex-direction: row;
@@ -64,79 +79,176 @@
    margin-bottom: 10em;
 }
 
-.card{
+.card {
+   background-color: rgb(241, 241, 241);
    padding: 0.6em;
    text-decoration: none;
    color: black;
    box-shadow: 6px 6px 10px 1px rgb(197, 197, 197);
 }
 
-.card:hover{
+.card:hover {
    transform: scale(1.01);
    color: black;
    border: 1px solid #be0000;
 }
 
-.car_name{
+.card_button {
+   display: inline-block;
+   width: 35%;
+}
+
+.card_button:hover {
+   opacity: 80%;
+}
+
+.car_name {
    margin-top: 1em;
 }
 
-.footer{
+.card-price{
+   color: #be0000;
+   font-weight: 700;
+   font-size: 18px;
+}
+
+.footer {
    width: 100%;
    height: 100px;
    background-color: black;
 }
 
-.footer_text{
+.footer_text {
    text-align: center;
    padding-top: 0.8em;
 }
 
-.footer_link{
+.footer_link {
    text-decoration: none;
    color: white;
 }
-.footer_link:hover{
+
+.footer_link:hover {
    opacity: 80%;
    color: azure;
 }
 
-.footer_item{
+.footer_item {
    display: flex;
    flex-direction: row;
    justify-content: center;
 }
 
-.footer_social_link{
+.footer_social_link {
    margin-top: 0.5em;
    margin-left: 0.5em;
 }
 
-.footer_social_link:hover{
+.footer_social_link:hover {
    opacity: 80%;
 }
 
-h4{
-   margin: 0%;
+.bar {
+   width: 100%;
+   height: 5px;
+   background-color: #be0000;
 }
 
-.main{
+.basket_wrapper {
+   box-shadow: 0px -10px 30px 3px rgba(0, 0, 0, .5);
+}
+
+h4 {
+   margin: 0%;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 50px;
+}
+
+.main {
    display: flex;
 }
 
-.tables{
+.table {
+   display: inline-block;
+   margin-bottom: 1%;
+   text-align: center;
+}
+
+#basket_out {
+   display: inline-block;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.bin_img{
+   width: 24px;
+}
+
+table {
+   border-spacing: 0 10px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: bold;
+}
+
+th {
+   padding: 10px 20px;
+   background: #56433D;
+   color: #F9C941;
+   border-right: 4px solid;
+   font-size: 0.9em;
+}
+
+th:first-child {
+   text-align: left;
+}
+
+th:last-child {
+   border-right: none;
+}
+
+td {
+   vertical-align: middle;
+   font-weight: bold;
+   padding: 10px;
+   font-size: 22px;
+   text-align: center;
+   border-top: 3px solid #a30101;
+   border-bottom: 3px solid #a30101;
+   border-right: 3px solid #a30101;
+}
+
+td:first-child {
+   border-left: 3px solid #a30101;
+   border-right: none;
+}
+
+td:nth-child(2) {
+   text-align: left;
+}
+
+.check{
    display: inline-block;
 }
 
-.table{
-   display: inline-block;
+.check_box_icon{
+   width: 24px;
 }
 
-.add_delete{
-   display: inline-block;
-   margin-left: 10px;
+.check_box_icon:hover{
+   background-color:#be000071;
+   border-radius: 20%;
 }
 
-.delete{
-   padding-top: 5px;
+.bin_img:hover{
+   opacity: 70%;
+}
+
+#price{
+   margin-top: 4px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: bold;
+   font-size: 20px;
+   border: 4px solid #a30101;
 }

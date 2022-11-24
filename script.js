@@ -1,23 +1,55 @@
 function printTable() {
-   let table1 = '<table border="1" cellpadding="3">';
-
-   for (let x in points) {
-      table1 += '<tr>';
-      table1 += '<td>' + x + '</td>';
-      table1 += '<td>' + points[x] + '</td>';
-      table1 += '<td>' + document.getElementById('checkbox') + points[x] + '</td>';
-      table1 += '</tr>';
+   let table = '<table border="2" cellpadding="3">';
+   for (let x in basket) {
+      let inner = `<div class="bin" onclick="deleteFromBasket('${x}');"><img class="bin_img" src="images/garbage.png" alt=""></div>`;
+      table += '<tr>';
+      table += '<td>' + x + '</td>';
+      table += '<td>';
+      table += '<td>' + basket[x] + ' руб.' + '</td>';
+      table += '<td>' + inner + '</td>';
    }
-   document.getElementById('points_out').innerHTML = table1 + '</table>';
+   document.getElementById('basket_out').innerHTML = table + '</table>' + `<div class="items_price" id="price">${price()}</div>`;
 }
 
-const points = {
-   'Lenovo Legion 5 Pro': 150000,
-   'Lenovo Legion 5': 146000,
-   'Lenovo Legion Slime 5': 134600,
-   'Lenovo Legion 7': 189000,
-   'Lenovo Legion 7 Pro': 200000,
-   'Lenovo Legion Slim 7': 178000,
-};
+function addToBasket(s) {
+   basket[s] = prices[s]
+   printTable(this.event.target.id)
+   //document.getElementById(this.event.target.id).style = "opacity: 30%"
+}
 
-printTable();
+function deleteFromBasket(s) {
+   delete basket[s];
+   printTable();
+   if((Object.keys(basket)).length == 0) document.getElementById('price').style = "border: 0px solid #a30101;";
+   //document.getElementById().style = "opacity: 100%";
+}
+
+function scrollDown() {
+   window.scrollTo(0, 6000)
+}
+
+function price()
+{
+   let sum = 0
+   for(let x in basket){
+      sum += basket[x]
+   }
+   if(sum != 0) return "Сумма заказа: " + String(sum) + " руб.";
+   else return "";
+}
+
+const storage = {
+   'Ретро колёса': 3,
+   'Моторное масло Ravenol': 1,
+   'Ретро чехлы': 0,
+   'Диски в стиле ретро': 5,
+   'Ретро фары': 10,
+};
+const prices = {
+   'Ретро колёса': 9900,
+   'Моторное масло Ravenol': 1500,
+   'Ретро чехлы': 5100,
+   'Диски в стиле ретро': 4577,
+   'Ретро фары': 790,
+};
+const basket = {}

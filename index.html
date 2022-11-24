@@ -17,14 +17,10 @@
          <div class="container-fluid">
             <a class="navbar-brand" href="#">Retro Style</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-               <div class="navbar-nav">
-                  <a class="nav-link" href="basket.html">Корзина</a>
+               <div class="navbar-nav" onclick="scrollDown();">
+                  <a class="nav-link" href="#!">Корзина</a>
                </div>
             </div>
-            <form class="d-flex" role="search">
-               <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
-               <button class="btn btn-outline-dark" type="submit">Поиск</button>
-            </form>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -79,6 +75,9 @@
                      <h5 class="card-title">Ретро колёса</h5>
                      <p class="card-text">4 колеса с белой обводкой для LADA 2101</p>
                      <p class="card-price">9 900 руб.</p>
+                     <div class="card_button" onclick="addToBasket('Ретро колёса');">
+                        <img class="card_button_img" src="images/ToBasket.png" id="1">
+                     </div>
                   </div>
                </a>
             </div>
@@ -91,6 +90,9 @@
                      <h5 class="card-title">Моторное масло Ravenol</h5>
                      <p class="card-text">Моторное масло для ретро-автомобилей</p>
                      <p class="card-price">1 500 руб.</p>
+                     <div class="card_button" onclick="addToBasket('Моторное масло Ravenol');">
+                        <img class="card_button_img" src="images/ToBasket.png" id="2">
+                     </div>
                   </div>
                </a>
             </div>
@@ -103,6 +105,9 @@
                      <h5 class="card-title">Ретро чехлы</h5>
                      <p class="card-text">Чехлы для автомобилей в стиле ретро</p>
                      <p class="card-price">5 100 руб.</p>
+                     <div class="card_button" onclick="addToBasket('Ретро чехлы');">
+                        <img class="card_button_img" src="images/ToBasket.png" id="3">
+                     </div>
                   </div>
                </a>
             </div>
@@ -117,6 +122,9 @@
                      <h5 class="card-title">Диски в стиле ретро</h5>
                      <p class="card-text">4 ретро диска для вашей ласточки</p>
                      <p class="card-price">4 577 руб.</p>
+                     <div class="card_button" onclick="addToBasket('Диски в стиле ретро');">
+                        <img class="card_button_img" src="images/ToBasket.png" id="4">
+                     </div>
                   </div>
                </a>
             </div>
@@ -128,7 +136,10 @@
                   <div class="card-body">
                      <h5 class="card-title">Ретро фары</h5>
                      <p class="card-text">Красные фары с хромированными деталями</p>
-                     <p class="card-price">600 руб.</p>
+                     <p class="card-price">790 руб.</p>
+                     <div class="card_button" onclick="addToBasket('Ретро фары');">
+                        <img class="card_button_img" src="images/ToBasket.png" id="5">
+                     </div>
                   </div>
                </a>
             </div>
@@ -145,11 +156,22 @@
                </a>
             </div>
          </div>
-         
-         </div>
+
+      </div>
       </div>
    </section>
    <!-- Body end -->
+
+   <!-- Basket -->
+   <div class="basket_wrapper">
+      <div class="bar"></div>
+      <div class="table">
+         <h4>Товары в корзине</h4>
+         <div class="basket_table" id="basket_out"></div>
+      </div>
+   </div>
+
+   <!-- Footer -->
    <footer class="footer">
       <div class="footer_text">
          <a href="#!" class="footer_link">&copy; Retro Style Corp. 2022</a>
@@ -175,6 +197,7 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"></script>
+   <script src="script.js"></script>
 </body>
 
 </html>
