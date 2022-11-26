@@ -28,30 +28,6 @@
    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* ubuntu-regular - cyrillic */
-@font-face {
-   font-family: 'Ubuntu';
-   font-style: normal;
-   font-weight: 400;
-   src: local(''),
-      url('../fonts/ubuntu-v20-cyrillic-regular.woff2') format('woff2'),
-      /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/ubuntu-v20-cyrillic-regular.woff') format('woff');
-   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* ubuntu-500 - cyrillic */
-@font-face {
-   font-family: 'Ubuntu';
-   font-style: normal;
-   font-weight: 500;
-   src: local(''),
-      url('../fonts/ubuntu-v20-cyrillic-500.woff2') format('woff2'),
-      /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/ubuntu-v20-cyrillic-500.woff') format('woff');
-   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 .navbar-brand {
    font-family: 'Oleo Script Swash Caps';
    font-style: normal;
@@ -106,7 +82,7 @@
    margin-top: 1em;
 }
 
-.card-price{
+.card-price {
    color: #be0000;
    font-weight: 700;
    font-size: 18px;
@@ -182,8 +158,8 @@ h4 {
    justify-content: center;
 }
 
-.bin_img{
-   width: 24px;
+.bin_img {
+   width: 18px;
 }
 
 table {
@@ -228,27 +204,28 @@ td:nth-child(2) {
    text-align: left;
 }
 
-.check{
-   display: inline-block;
-}
-
-.check_box_icon{
-   width: 24px;
-}
-
-.check_box_icon:hover{
-   background-color:#be000071;
-   border-radius: 20%;
-}
-
-.bin_img:hover{
+.bin_img:hover {
    opacity: 70%;
 }
 
-#price{
+#price {
    margin-top: 4px;
    font-family: 'Open Sans', sans-serif;
    font-weight: bold;
    font-size: 20px;
    border: 4px solid #a30101;
+}
+.td_color:hover {
+   background: #dbdbdb;
+   color: rgb(0, 0, 0);
+}
+
+.item_price{
+   text-align: center;
+}
+
+#price_out{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
 }
