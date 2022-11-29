@@ -24,23 +24,31 @@ function addToBasket(s) {
    document.getElementById(this.event.target.id).style = "opacity: 30%"
 }
 
-function deleteFromBasket(s, id) {
-   delete basket[s]
-   delete activeCheckboxes[s]
-   printTable()
+function deleteFromBasket(x, idx) {
+   delete basket[x]
+   document.getElementById(idx).style = "opacity: 100%"
    check()
+   delete activeCheckboxes[x]
+   printTable()
    if ((Object.keys(basket)).length == 0) {
       document.getElementById('price').style = "border: 0px solid #a30101;"
    }
-   document.getElementById(id).style = "opacity: 100%"
 }
 
 function check(){
    let a = document.querySelectorAll('input:checked');
    let sum = 0
    for (var i = 0; i < a.length; i++) {
-      sum += Number(a[i].value)
-      activeCheckboxes[a[i].id] = a[i].id;
+      if(!(a[i].id in basket) && a[i].id in activeCheckboxes)
+      {
+         delete activeCheckboxes[a[i].id]
+         $(`#${a[i].id}`).prop('check', false)
+      }
+      else
+      {
+         activeCheckboxes[a[i].id] = a[i].id;
+         sum += Number(a[i].value)
+      }
    }
    if(sum != 0)
       document.getElementById('price_out').innerHTML = "<table>" + `<td class="items_price" id="price">Сумма заказа: ${sum} руб.</td>` + "</table>";
