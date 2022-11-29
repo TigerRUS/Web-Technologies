@@ -52,7 +52,6 @@ function scrollDown() {
    window.scrollTo(0, 6000)
 }
 
-
 const prices = {
    'Ретро колёса': 9900,
    'Моторное масло Ravenol': 1500,
