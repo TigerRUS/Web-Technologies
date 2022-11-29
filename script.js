@@ -8,7 +8,10 @@ function printTable() {
       table += '<td>' + x + '</td>'
       table += '<td>'
       table += '<td>' + basket[x] + ' руб.' + '</td>'
-      table += '<td>' + `<input type="checkbox" class="checkbox" onclick="check();" value="${basket[x]}">` + '</td>'
+      if(x in activeCheckboxes)
+         table += '<td>' + `<input type="checkbox" class="checkbox" id="${x}" onclick="check();" value="${basket[x]}" checked />` + '</td>'
+      else
+         table += '<td>' + `<input type="checkbox" class="checkbox" id="${x}" onclick="check();" value="${basket[x]}">` + '</td>'
       table += '<td>' + inner + '</td>'
    }
    document.getElementById('basket_out').innerHTML = table + '</table>';
@@ -23,6 +26,7 @@ function addToBasket(s) {
 
 function deleteFromBasket(s, id) {
    delete basket[s]
+   delete activeCheckboxes[s]
    printTable()
    check()
    if ((Object.keys(basket)).length == 0) {
@@ -31,21 +35,23 @@ function deleteFromBasket(s, id) {
    document.getElementById(id).style = "opacity: 100%"
 }
 
-function scrollDown() {
-   window.scrollTo(0, 6000)
-}
-
 function check(){
    let a = document.querySelectorAll('input:checked');
    let sum = 0
    for (var i = 0; i < a.length; i++) {
       sum += Number(a[i].value)
+      activeCheckboxes[a[i].id] = a[i].id;
    }
    if(sum != 0)
       document.getElementById('price_out').innerHTML = "<table>" + `<td class="items_price" id="price">Сумма заказа: ${sum} руб.</td>` + "</table>";
    else 
       document.getElementById('price_out').innerHTML = ""
 }
+
+function scrollDown() {
+   window.scrollTo(0, 6000)
+}
+
 
 const prices = {
    'Ретро колёса': 9900,
@@ -56,5 +62,6 @@ const prices = {
 }
 const basket = {}
 const idx = {}
+const activeCheckboxes = {}
 
 
