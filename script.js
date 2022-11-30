@@ -15,7 +15,14 @@ function printTable() {
       table += '<td>' + inner + '</td>'
    }
    document.getElementById('basket_out').innerHTML = table + '</table>';
-   cost()
+
+   let sum = 0
+   for(let i in activeCheckboxes)
+      sum += Number(i)
+   if(sum != 0)
+      document.getElementById('price_out').innerHTML = "<table>" + `<td class="items_price" id="price">Сумма заказа: ${sum} руб.</td>` + "</table>";
+   else 
+      document.getElementById('price_out').innerHTML = ""
 }
 
 function addToBasket(s) {
@@ -45,16 +52,6 @@ function check(){
          delete activeCheckboxes[a[i].id]
    }
    printTable()
-}
-
-function cost(){
-   let sum = 0
-   for(let x in activeCheckboxes)
-      sum += Number(x)
-   if(sum != 0)
-      document.getElementById('price_out').innerHTML = "<table>" + `<td class="items_price" id="price">Сумма заказа: ${sum} руб.</td>` + "</table>";
-   else 
-      document.getElementById('price_out').innerHTML = ""
 }
 
 function scrollDown() {
